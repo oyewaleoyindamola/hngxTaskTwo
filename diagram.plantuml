@@ -11,10 +11,14 @@ package "Endpoint" {
 database "Database" {
   [users]
 }
++----------------+         +----------------+         +------------------+         +----------------+          +-----------------+
+|   UserEndpoint |         |  UserController|         |    UserService  |         | UserRepository |         |       User      |
++----------------+         +----------------+         +------------------+         +----------------+          +-----------------+
+| +createUser()  |         | +createUser()  |         | +createUser()   |         | +save()        |          | - id: string     |
+| +updateUser()  |   ----> | +updateUser()  |  -----> | +updateUser()   | ----->  | +findById()   |  -----    | - name: string   |
+| +readUserById()|         | +readUserById()|         | +readUserById() |         |+findByIdAnd()  |          |                  |
+| +deleteUserById|         | +deleteUserById|         | +deleteUserById |         |+findByIdAndDelete()|      |                  |
++----------------+         +----------------+         +------------------+         +----------------+          +-----------------+
 
-[Create] --> [user]
-[Read] --> [user]
-[Update] --> [user]
-[Delete] --> [user]
 
 @enduml
