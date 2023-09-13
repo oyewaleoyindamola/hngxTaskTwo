@@ -2,7 +2,7 @@ const Joi = require ("joi");
 const express = require("express");
 const Users = require("../model/user");
 const router = express.Router()
-const { model } = require("mongoose");
+const mongoose = require("mongoose");
 
 // Create name
 router.post("/api", async (req, res) => {
