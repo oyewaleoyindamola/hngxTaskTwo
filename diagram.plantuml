@@ -1,0 +1,20 @@
+@startuml diagram
+title Dynamic CRUD Operation Endpoint
+
+package "Endpoint" {
+  [Create] --> (POST /api)
+  [Read] --> (GET /api/user:_id)
+  [Update] --> (PUT /api/user:_id)
+  [Delete] --> (DELETE /api/user:_id)
+}
+
+database "Database" {
+  [users]
+}
+
+[Create] --> [user]
+[Read] --> [user]
+[Update] --> [user]
+[Delete] --> [user]
+
+@enduml
