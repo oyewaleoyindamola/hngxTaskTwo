@@ -15,7 +15,7 @@ database "Database" {
 |   UserEndpoint |         |  UserController|         |    UserService  |         | UserRepository |         |       User      |
 +----------------+         +----------------+         +------------------+         +----------------+          +-----------------+
 | +createUser()  |         | +createUser()  |         | +createUser()   |         | +save()        |          | - id: string     |
-| +updateUser()  |   ----> | +updateUser()  |  -----> | +updateUser()   | ----->  | +findById()   |  -----    | - name: string   |
+| +updateUser()  |   ----> | +updateUser()  |  -----> | +updateUser()   | ----->  | +findById()   |  ----->    | - name: string   |
 | +readUserById()|         | +readUserById()|         | +readUserById() |         |+findByIdAnd()  |          |                  |
 | +deleteUserById|         | +deleteUserById|         | +deleteUserById |         |+findByIdAndDelete()|      |                  |
 +----------------+         +----------------+         +------------------+         +----------------+          +-----------------+
