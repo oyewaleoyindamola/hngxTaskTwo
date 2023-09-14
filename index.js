@@ -17,7 +17,7 @@ const port = process.env.PORT || 8000
 const connection_string = process.env.CONNECTION_STRING;
 console.log(connection_string);
 
-app.use("/", router )
+app.use("/", router)
 
 app.listen(port, () => {
     console.log(`server is bouncing on port ${port}`);
