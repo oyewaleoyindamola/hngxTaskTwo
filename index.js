@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const router = require("./routes/user");
 
 
-const app = express()
+const app = express();
 app.use(cors())
 dotenv.config();
 
