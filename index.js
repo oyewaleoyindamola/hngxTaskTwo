@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = process.env.PORT || 8000
 const connection_string = process.env.CONNECTION_STRING;
+console.log(connection_string);
 
 app.use("/", router )
 
